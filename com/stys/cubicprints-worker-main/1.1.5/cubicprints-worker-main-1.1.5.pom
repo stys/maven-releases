@@ -71,6 +71,11 @@
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
+            <artifactId>cubicprints-worker-render-service-p5</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
             <artifactId>cubicprints-worker-reporter-service-api</artifactId>
             <version>${project.version}</version>
         </dependency>
