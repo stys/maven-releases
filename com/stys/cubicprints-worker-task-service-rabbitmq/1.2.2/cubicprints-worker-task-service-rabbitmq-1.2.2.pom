@@ -12,6 +12,7 @@
     </parent>
     
     <artifactId>cubicprints-worker-task-service-rabbitmq</artifactId>
+    <version>1.2.2</version>
 
     <dependencies>
         <dependency>

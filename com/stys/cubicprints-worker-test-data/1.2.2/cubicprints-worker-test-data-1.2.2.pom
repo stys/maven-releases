@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>cubicprints-worker-test-data</artifactId>
+    <version>1.2.2</version>
 
 
 </project>

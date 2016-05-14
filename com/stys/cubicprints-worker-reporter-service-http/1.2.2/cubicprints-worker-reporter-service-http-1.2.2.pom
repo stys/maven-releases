@@ -12,6 +12,7 @@
     </parent>
 
     <artifactId>cubicprints-worker-reporter-service-http</artifactId>
+    <version>1.2.2</version>
 
     <dependencies>
         <dependency>
