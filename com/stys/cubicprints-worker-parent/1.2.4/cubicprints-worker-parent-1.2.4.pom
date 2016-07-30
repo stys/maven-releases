@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.stys</groupId>
+    <artifactId>cubicprints-worker-parent</artifactId>
+    <version>1.2.4</version>
+    <modules>
+        <module>cubicprints-worker-render-service-api</module>
+        <module>cubicprints-worker-render-service-util</module>
+        <module>cubicprints-worker-render-service-p5</module>
+        <module>cubicprints-worker-render-service-gl4</module>
+        <module>cubicprints-worker-mesh-service-api</module>
+        <module>cubicprints-worker-mesh-service-meshtool</module>
+        <module>cubicprints-worker-reporter-service-api</module>
+        <module>cubicprints-worker-reporter-service-http</module>
+        <module>cubicprints-worker-storage-service-api</module>
+        <module>cubicprints-worker-storage-service-awss3</module>
+        <module>cubicprints-worker-storage-service-fs</module>
+        <module>cubicprints-worker-task-service-api</module>
+        <module>cubicprints-worker-task-service-rabbitmq</module>
+        <module>cubicprints-worker-main</module>
+        <module>cubicprints-worker-test-data</module>
+        <module>cubicprints-worker-utils</module>
+        <module>cubicprints-worker-common-dependencies</module>
+        <module>cubicprints-worker-storage-service-thingiverse</module>
+        <module>cubicprints-worker-renderer-p5</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <releases.url>file://../maven-releases</releases.url>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>github-maven-releases</id>
+            <name>Github Maven Releases</name>
+            <url>https://raw.github.com/stys/maven-releases/master/</url>
+        </repository>
+    </repositories>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>2.6.1</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.6</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.5.4</version>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>2.10</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.17</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+                <version>2.3.1</version>
+            </plugin>
+        </plugins>
+    </build>
+
+    <distributionManagement>
+        <repository>
+            <id>cubicprints.releases</id>
+            <name>Local Releases Repository</name>
+            <url>${releases.url}</url>
+        </repository>
+    </distributionManagement>
+
+</project>
