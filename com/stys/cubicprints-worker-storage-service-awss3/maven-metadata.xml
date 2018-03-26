@@ -3,7 +3,7 @@
   <groupId>com.stys</groupId>
   <artifactId>cubicprints-worker-storage-service-awss3</artifactId>
   <versioning>
-    <release>1.4.5</release>
+    <release>1.4.6</release>
     <versions>
       <version>1.1.2</version>
       <version>1.1.3</version>
@@ -20,7 +20,8 @@
       <version>1.4.3</version>
       <version>1.4.4</version>
       <version>1.4.5</version>
+      <version>1.4.6</version>
     </versions>
-    <lastUpdated>20180326115908</lastUpdated>
+    <lastUpdated>20180326150224</lastUpdated>
   </versioning>
 </metadata>
